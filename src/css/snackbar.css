@@ -1,0 +1,72 @@
+/* Основний контейнер форми */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Вирівнює всі елементи по лівому краю */
+  gap: 15px;
+  width: 100%;
+  max-width: 236px; /* Обмежуємо ширину, щоб форма не була на весь екран */
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+}
+
+/* Стилізація мітки Delay та State */
+.form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Текст Delay буде зліва */
+  gap: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* Поле вводу */
+.form input[type='number'] {
+  width: 100%; /* Розтягуємо поле на ширину форми */
+  box-sizing: border-box; /* Щоб padding не виходив за межі ширини */
+  padding: 8px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Рамка для вибору стану */
+fieldset {
+  border: 1px solid #767676;
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row; /* Радіо-кнопки в один рядок */
+  gap: 20px;
+  margin: 0;
+}
+
+legend {
+  padding: 0 5px;
+  font-size: 18px;
+  text-align: left; /* Заголовок State зліва */
+}
+
+/* Радіо-кнопки всередині */
+fieldset label {
+  flex-direction: row !important; /* Перевизначаємо для кнопок, щоб текст був поруч */
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Кнопка */
+button[type='submit'] {
+  width: 100%; /* Кнопка на всю ширину форми */
+  background-color: #efefef;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #e5e5e5;
+}
